@@ -88,3 +88,12 @@ const headImg = document.querySelector("img")
 window.addEventListener('resize', (event) => {
     headImg.src = "https://mpng.subpng.com/20190519/ue/kisspng-party-bus-clip-art-image-5ce13775a60fb4.3328934615582636696802.jpg"
 })
+
+
+//PREVENT DEFAULT BEHAVIOR ON NAV ITEMS
+anchorTags.forEach(anchor => {
+    anchor.addEventListener('click', (event) => {
+        event.preventDefault()
+        event.stopPropagation();
+    })
+})
