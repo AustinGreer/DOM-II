@@ -56,7 +56,7 @@ document.addEventListener('keypress', keyPress)
 // 6. load event
 //sends user a welcome message on load
 const welcomeMessage = (event) => {
-    alert("Welcome to Fun Bus! Please take a seat.")
+    //alert("Welcome to Fun Bus! Please take a seat.")
 }
 
 window.addEventListener("load", welcomeMessage)
@@ -69,5 +69,14 @@ anchorTags.forEach(anchor => {
     })
     anchor.addEventListener('blur', (event) => {
         event.target.style.background = "white"
+    })
+})
+
+// 9. copy
+// highlight paragraph that is copied
+const paragraph = document.querySelectorAll("p")
+paragraph.forEach(p => {
+    p.addEventListener('copy', (event) => {
+        event.target.style.background = 'yellow'
     })
 })
