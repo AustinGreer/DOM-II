@@ -80,3 +80,11 @@ paragraph.forEach(p => {
         event.target.style.background = 'yellow'
     })
 })
+
+// 10. resize
+// When user changes size, img changes
+const headImg = document.querySelector("img")
+
+window.addEventListener('resize', (event) => {
+    headImg.src = "https://mpng.subpng.com/20190519/ue/kisspng-party-bus-clip-art-image-5ce13775a60fb4.3328934615582636696802.jpg"
+})
