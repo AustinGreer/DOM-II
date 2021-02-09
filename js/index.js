@@ -33,3 +33,41 @@ anchorTags.forEach(anchor => {
     anchor.addEventListener('mouseenter', anchorEnter)
     anchor.addEventListener('mouseleave', anchorLeave)
 })
+
+// 4. dbl click
+//when user double clicks anywhere, the background changes to beige
+const backgroundChange = (event) => {
+    body.style.background = "beige"
+}
+
+document.addEventListener('dblclick', backgroundChange)
+
+
+
+// 5. Keydown
+// Browser to inform user when a key is pressed
+
+const keyPress = (event) => {
+    alert(`This ${event.key} was pressed`)
+}
+
+document.addEventListener('keypress', keyPress)
+
+// 6. load event
+//sends user a welcome message on load
+const welcomeMessage = (event) => {
+    alert("Welcome to Fun Bus! Please take a seat.")
+}
+
+window.addEventListener("load", welcomeMessage)
+
+// 7. focus 8. blur
+//orange background over anchor links
+anchorTags.forEach(anchor => {
+    anchor.addEventListener("focus", (event) => {
+        event.target.style.background = "orange"
+    })
+    anchor.addEventListener('blur', (event) => {
+        event.target.style.background = "white"
+    })
+})
