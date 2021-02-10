@@ -97,3 +97,36 @@ anchorTags.forEach(anchor => {
         event.stopPropagation();
     })
 })
+
+//NEST SIMILAR EVENTS AND PREVENT EVENT PROPAGATION
+const destination = document.querySelectorAll(".destination")
+destination.forEach(element => {
+    element.addEventListener('click', (event) => {
+        event.target.style.backgroundColor = "MidnightBlue"
+    })
+})
+
+const destionationHeader = document.querySelectorAll(".destination h4")
+const destinationParagraph = document.querySelectorAll(".destination p")
+const destinationBtn = document.querySelectorAll(".destination btn")
+
+destionationHeader.forEach(header => {
+    header.addEventListener('dblclick', (event) => {
+        event.stopPropagation()
+        event.target.style.background = "orange"
+    })
+})
+
+destinationParagraph.forEach(par => {
+    par.addEventListener("dblclick", (event) => {
+        event.stopPropagation
+        event.target.style.background = "green"
+    })
+})
+
+destinationBtn.forEach(button => {
+    button.addEventListener("dblclick", (event) => {
+        event.stopPropagation
+        event.target.style.background = "orchid"
+    })
+})
